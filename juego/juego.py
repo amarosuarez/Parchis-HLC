@@ -15,41 +15,6 @@ class Parchis:
         Parchis.dado1 = randint(1, 6)
         Parchis.dado2 = randint(1, 6)
 
-    # def pintaTablero(self):
-    #     cadena = ""
-
-    #     # Bucle para pintar los números
-    #     for i in range(Parchis.TAM_TABLERO + 1):
-    #         if (i == 0):
-    #             cadena += "\tI\t"
-    #         elif (i == Parchis.TAM_TABLERO):
-    #             cadena += "F\n"
-    #         else:
-    #             cadena += str(i) + "\t"
-
-    #     # Concatenamos el nombre del jugador 1
-    #     cadena += self.nombreJ1 + "\tI"
-    #     for i in range(self.fichaJ1):
-    #         cadena += "\t"
-
-    #     # Si la ficha no es igual a 0, pintamos la ficha
-    #     if (self.fichaJ1 != 0):
-    #         cadena += "O"
-
-    #     # Pintamos un salto de línea
-    #     cadena += "\n"
-
-    #     # Concatenamos el nombre del jugador 2
-    #     cadena += self.nombreJ2 + "\tI"
-    #     for i in range(self.fichaj2):
-    #         cadena += "\t"
-        
-    #     # Si la ficha no es igual a 0, pintamos la ficha
-    #     if (self.fichaj2 != 0):
-    #         cadena += "O"
-
-    #     return cadena
-
     def pintaTablero(self):
         cadena = ""
 
