@@ -2,7 +2,7 @@ from juego.juego import Parchis
 
 def test_avanzaPosiciones5_2_7():
     parchis = Parchis("Amaro", "Ruben")
-    Parchis.TAM_TABLERO = 10
+    Parchis.TAM_TABLERO = 20
     Parchis.dado1 = 5
     Parchis.dado2 = 2
     parchis.fichaJ1 = 0
@@ -14,7 +14,7 @@ def test_avanzaPosiciones5_2_7():
 
 def test_avanzaPosiciones5_5_10():
     parchis = Parchis("Amaro", "Ruben")
-    Parchis.TAM_TABLERO = 10
+    Parchis.TAM_TABLERO = 20
     Parchis.dado1 = 5
     Parchis.dado2 = 5
     parchis.fichaJ1 = 0

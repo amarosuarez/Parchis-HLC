@@ -1,7 +1,7 @@
 from random import *
 
 class Parchis:
-    TAM_TABLERO = 10
+    TAM_TABLERO = 20
     dado1 = 0
     dado2 = 0
 

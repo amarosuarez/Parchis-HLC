@@ -10,9 +10,9 @@ def test_esGanadorN():
 
 def test_esGanadorJ1():
     parchis = Parchis("Amaro", "Ruben")
-    Parchis.TAM_TABLERO = 10
-    parchis.fichaJ1 = 10
-    parchis.fichaJ2 = 0
+    Parchis.TAM_TABLERO = 20
+    parchis.fichaJ1 = 20
+    parchis.fichaJ2 = 10
     cadenaEsperada = "Amaro"
     
     assert parchis.esGanador() == cadenaEsperada
