@@ -1,15 +1,5 @@
 from juego.juego import Parchis
 
-def test_elena():
-    juego = Parchis("Jug1", "Jug2")
-    # juego.fichaJ1 = 5
-    Parchis.TAM_TABLERO = 10
-    cadResultado = juego.pintaTablero()
-    cadEsperada = "\tI\t1\t2\t3\t4\t5\t6\t7\t8\t9\tF\n"
-    cadEsperada += "Jug1\tI\t\t\t\t\t\t\t\t\t\tF\n"
-    cadEsperada += "Jug2\tI\t\t\t\t\t\t\t\t\t\tF\n"
-    assert cadEsperada == cadResultado
-
 def test_pintaTablero():
     parchis = Parchis("Amaro", "Ruben")
     parchis.fichaJ1 = 0

@@ -8,8 +8,9 @@ def test_avanzaPosiciones5_2_7():
     parchis.fichaJ1 = 0
 
     posicionEsperada = 7
+    parchis.avanzaPosiciones(0)
 
-    assert parchis.avanzaPosiciones(0) == posicionEsperada
+    assert parchis.fichaJ1 == posicionEsperada
 
 def test_avanzaPosiciones5_5_10():
     parchis = Parchis("Amaro", "Ruben")
@@ -19,7 +20,8 @@ def test_avanzaPosiciones5_5_10():
     parchis.fichaJ1 = 0
 
     posicionEsperada = 10
-    assert parchis.avanzaPosiciones(0) == posicionEsperada
+    parchis.avanzaPosiciones(0)
+    assert parchis.fichaJ1 == posicionEsperada
 
 def test_avanzaPosiciones5_5_7():
     parchis = Parchis("Amaro", "Ruben")
@@ -29,7 +31,8 @@ def test_avanzaPosiciones5_5_7():
     parchis.fichaJ2 = 3
 
     posicionEsperada = 7
-    assert parchis.avanzaPosiciones(1) == posicionEsperada
+    parchis.avanzaPosiciones(1)
+    assert parchis.fichaJ2 == posicionEsperada
 
 def test_avanzaPosiciones5_3_7():
     parchis = Parchis("Amaro", "Ruben")
@@ -39,7 +42,8 @@ def test_avanzaPosiciones5_3_7():
     parchis.fichaJ1 = 6
 
     posicionEsperada = 6
-    assert parchis.avanzaPosiciones(0) == posicionEsperada
+    parchis.avanzaPosiciones(0)
+    assert parchis.fichaJ1 == posicionEsperada
 
 def test_avanzaPosiciones6_6_7():
     parchis = Parchis("Amaro", "Ruben")
@@ -49,7 +53,8 @@ def test_avanzaPosiciones6_6_7():
     parchis.fichaJ1 = 9
 
     posicionEsperada = 1
-    assert parchis.avanzaPosiciones(0) == posicionEsperada
+    parchis.avanzaPosiciones(0)
+    assert parchis.fichaJ1 == posicionEsperada
 
 def test_avanzaPosiciones6_6_12():
     parchis = Parchis("Amaro", "Ruben")
@@ -59,7 +64,8 @@ def test_avanzaPosiciones6_6_12():
     parchis.fichaJ1 = 12
 
     posicionEsperada = 6
-    assert parchis.avanzaPosiciones(0) == posicionEsperada
+    parchis.avanzaPosiciones(0)
+    assert parchis.fichaJ1 == posicionEsperada
 
 def test_avanzaPosiciones6_6_17():
     parchis = Parchis("Amaro", "Ruben")
@@ -69,7 +75,8 @@ def test_avanzaPosiciones6_6_17():
     parchis.fichaJ1 = 17
 
     posicionEsperada = 11
-    assert parchis.avanzaPosiciones(0) == posicionEsperada
+    parchis.avanzaPosiciones(0)
+    assert parchis.fichaJ1 == posicionEsperada
 
 def test_avanzaPosiciones6_6_19():
     parchis = Parchis("Amaro", "Ruben")
@@ -79,4 +86,5 @@ def test_avanzaPosiciones6_6_19():
     parchis.fichaJ2 = 19
 
     posicionEsperada = 9
-    assert parchis.avanzaPosiciones(1) == posicionEsperada
+    parchis.avanzaPosiciones(1)
+    assert parchis.fichaJ2 == posicionEsperada
