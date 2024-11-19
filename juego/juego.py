@@ -7,7 +7,7 @@ class Parchis:
 
     def __init__(self, nombreJ1, nombreJ2):
         self.fichaJ1 = 0
-        self.fichaj2 = 0
+        self.fichaJ2 = 0
         self.nombreJ1 = nombreJ1
         self.nombreJ2 = nombreJ2
 
@@ -70,11 +70,33 @@ class Parchis:
                     if j == self.fichaJ1:
                         cadena += "O"
                 elif i == 3:
-                    if j == self.fichaj2:
+                    if j == self.fichaJ2:
                         cadena += "O"
                 
             cadena += "\tF\n"
         return cadena
     
-parchis = Parchis("a", "b")
-print(parchis.pintaTablero())
+    def avanzaPosiciones (self, jugador):
+        posicion = self.actualizarPosicion(self.fichaJ1 if jugador == 0 else self.fichaJ2)
+
+        if jugador == 0:
+            self.fichaJ1 = posicion
+        else:
+            self.fichaJ2 = posicion
+
+        return posicion
+    
+    def actualizarPosicion(self, ficha):
+        sumaDados = (Parchis.dado1 + Parchis.dado2)
+        posicion = sumaDados
+
+        # Si la suma de la posición actual más la suma de los dados es mayor que el tablero, usamos la fórmula para el rebote
+        if (ficha + posicion > Parchis.TAM_TABLERO):
+            posicion = (Parchis.TAM_TABLERO * 2) - (ficha + posicion)
+
+            # Si la fórmula ha resultado negativa, la corregimos restándole a la suma de los dados el tam tablero y sumando
+            # esto a la posicion calculada anteriormente
+            if (posicion < 0):
+                posicion += (sumaDados - Parchis.TAM_TABLERO)
+
+        return posicion
