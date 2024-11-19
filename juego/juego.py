@@ -88,14 +88,27 @@ class Parchis:
     
     def actualizarPosicion(self, ficha):
         sumaDados = (Parchis.dado1 + Parchis.dado2)
+        
+        # Por defecto, le damos el valor de sumaDados
         posicion = sumaDados
 
         # Si la suma de la posición actual más la suma de los dados es mayor que el tablero, usamos la fórmula para el rebote
-        if (ficha + posicion > Parchis.TAM_TABLERO):
-            posicion = (Parchis.TAM_TABLERO * 2) - (ficha + posicion)
+        if (ficha + sumaDados > Parchis.TAM_TABLERO):
+            # Caso práctico
+            # TAM -> 10
+            # Jugador en 6
+            # Suma dados -> 8
+            # 20 - 14 (6+8) = 6, esta es la posición final
+            posicion = (Parchis.TAM_TABLERO * 2) - (ficha + sumaDados)
 
             # Si la fórmula ha resultado negativa, la corregimos restándole a la suma de los dados el tam tablero y sumando
             # esto a la posicion calculada anteriormente
+            # Caso práctico
+            # TAM -> 10
+            # Jugador en 9
+            # Suma dados -> 12
+            # 20 - 21 (9+12) = -1
+            # Para corregirlo -> 12 - 10 = 2 -> -1 + 2 = 1, esta es la posición final
             if (posicion < 0):
                 posicion += (sumaDados - Parchis.TAM_TABLERO)
 
